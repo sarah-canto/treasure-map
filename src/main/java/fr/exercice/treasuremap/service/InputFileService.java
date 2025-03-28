@@ -29,7 +29,7 @@ public class InputFileService {
      * @return le chemin absolu du fichier d'entrée
      */
     public String getAndCheckInputFilePath() {
-        log.info("Veuillez entrer le le chemin du fichier d'entrée : ");
+        log.info("Veuillez entrer le chemin du fichier d'entrée : ");
         Scanner s = new Scanner(System.in);
         String filepath = s.nextLine();
         if (StringUtils.isBlank(filepath)) {
