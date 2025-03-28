@@ -30,9 +30,8 @@ public class InputFileService {
      */
     public String getAndCheckInputFilePath() {
         log.info("Veuillez entrer le le chemin du fichier d'entrée : ");
-        String filepath = "";
         Scanner s = new Scanner(System.in);
-        filepath = s.nextLine();
+        String filepath = s.nextLine();
         if (StringUtils.isBlank(filepath)) {
             throw new IllegalStateException("Le chemin de fichier entré est vide, veuillez réessayer.");
         }

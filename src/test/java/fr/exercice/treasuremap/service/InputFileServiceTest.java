@@ -66,9 +66,9 @@ class InputFileServiceTest {
     @Test
     void readFile_whenFileDoesNotExist_throwsNoSuchFileException() {
         String filePath = "src/test/java/resources/inputFiles/game.txt";
-        Exception exception = assertThrowsExactly(NoSuchFileException.class, () -> {
-            inputFileService.readFile(filePath);
-        });
+
+        Exception exception = assertThrowsExactly(NoSuchFileException.class, () -> inputFileService.readFile(filePath));
+
         assertThat(exception.getMessage()).contains("Le fichier spécifié est introuvable : " + Paths.get(filePath));
     }
 

@@ -46,9 +46,7 @@ class GameAssetsCreatorServiceTest {
         Cell alreadyExistingCell = new Cell().setPosX(1).setPosY(2).setType(CellType.MOUTAIN);
         Mockito.when(game.getMountainCells()).thenReturn(List.of(alreadyExistingCell));
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            gameAssetsCreatorService.createMountain(splitLine, game, line);
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> gameAssetsCreatorService.createMountain(splitLine, game, line));
 
         assertEquals("Impossible de créer la montagne de la ligne " + line, exception.getMessage(), "Le message d'erreur attendu est incorrect");
     }
@@ -73,9 +71,7 @@ class GameAssetsCreatorServiceTest {
         Adventurer alreadyOccupiedCell = new Adventurer().setPosX(1).setPosY(2).setOrientation(Orientation.E).setName("Robinson").setMoves("DAAGAAADDDA");
         Mockito.when(game.getAdventurers()).thenReturn(List.of(alreadyOccupiedCell));
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            gameAssetsCreatorService.createTreasure(splitLine, game, line);
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> gameAssetsCreatorService.createTreasure(splitLine, game, line));
 
         assertEquals("Impossible de créer le trésor de la ligne " + line, exception.getMessage(), "Le message d'erreur attendu est incorrect");
     }
@@ -104,9 +100,7 @@ class GameAssetsCreatorServiceTest {
         Cell alreadyExistingCell = new Cell().setPosX(1).setPosY(2).setNbTreasure(2).setType(CellType.TREASURE);
         Mockito.when(game.getTreasureCells()).thenReturn(List.of(alreadyExistingCell));
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            gameAssetsCreatorService.createAdventurer(splitLine, game, line);
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> gameAssetsCreatorService.createAdventurer(splitLine, game, line));
 
         assertEquals("Impossible de créer l'aventurier de la ligne " + line, exception.getMessage(), "Le message d'erreur attendu est incorrect");
     }
@@ -118,9 +112,7 @@ class GameAssetsCreatorServiceTest {
         Adventurer alreadyExistingAdventurer = new Adventurer().setPosX(2).setPosY(3).setNbTreasure(2).setName("Lara");
         Mockito.when(game.getAdventurers()).thenReturn(List.of(alreadyExistingAdventurer));
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            gameAssetsCreatorService.createAdventurer(splitLine, game, line);
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> gameAssetsCreatorService.createAdventurer(splitLine, game, line));
 
         assertEquals("Impossible de créer l'aventurier de la ligne " + line, exception.getMessage(), "Le message d'erreur attendu est incorrect");
     }
