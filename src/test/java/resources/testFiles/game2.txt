@@ -1,0 +1,8 @@
+C - 9 - 6
+M - 2 - 2
+T - 0 - 5 - 2
+T - 6 - 1 - 1
+T - 8 - 2 - 3
+A - Mississippi - 1 - 1 - S - AAADAAAAADAGGGGDAG
+A - Ohio - 7 - 3 - E - AADADA
+A - Illinois - 3 - 3 - N - AAADADAG

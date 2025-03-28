@@ -1,0 +1,7 @@
+C - 21 - 54
+M - 2 - 2
+M - 18 - 41
+T - 15 - 3 - 2
+T - 12 - 34 - 1
+A - Iowa - 1 - 1 - S - GGADADDAADADA
+A - Minnesota - 12 - 5 - E - GGADADDAAA
